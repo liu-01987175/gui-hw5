@@ -1,0 +1,85 @@
+<!-- 
+ Stanley Liu
+ Stanley_liu@student.uml.edu
+ Github Username: liu-01987175
+ GUI HW5: Scrabble Tile Game
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrabble Tile Game</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <div id="scoreLine">
+                <div>
+                    <div class="scoreLabel">Current Word:</div>
+                    <div class="scoreCount" id="currentWord"></div>
+                </div>
+                <div>
+                    <div class="scoreLabel">Current Score:</div>
+                    <div class="scoreCount" id="currentScore"></div>
+                </div>
+                <div>
+                    <div class="scoreLabel">Total Score:</div>
+                    <div class="scoreCount" id="totalScore">0</div>
+                </div>
+                <div>
+                    <div class="scoreLabel">Tiles Left:</div>
+                    <div class="scoreCount" id="remainingTiles"></div>
+                </div>
+            </div>
+
+            <div class="board-container">
+                <img src="graphics_data/Scrabble_Board_OneLine.png" alt="Scrabble Board" class="scrabble-board">
+                <div class="board-overlay">
+                    <div id="boardRow">
+                        <img class="boardSlot boardSlot-droppable" id="0" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                        <img class="boardSlot boardSlot-droppable" id="1" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                        <img class="boardSlot boardSlot-droppable" id="2" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                        <img class="boardSlot boardSlot-droppable" id="3" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                        <img class="boardSlot boardSlot-droppable" id="4" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                        <img class="boardSlot boardSlot-droppable" id="5" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                        <img class="boardSlot boardSlot-droppable" id="6" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                        <img class="boardSlot boardSlot-droppable" id="7" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                        <img class="boardSlot boardSlot-droppable" id="8" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                        <img class="boardSlot boardSlot-droppable" id="9" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                        <img class="boardSlot boardSlot-droppable" id="10" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                        <img class="boardSlot boardSlot-droppable" id="11" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                        <img class="boardSlot boardSlot-droppable" id="12" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                        <img class="boardSlot boardSlot-droppable" id="13" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                        <img class="boardSlot boardSlot-droppable" id="14" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_Blank.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tile holder img, need to put this under the current tiles -->
+            <div class="tile-holder-container">
+                <img src="graphics_data/scrabble-tile-holder-406774_640.png" alt="Tile Holder" class="tile-holder">
+                <div id="tile-rack" class="tile-rack"></div>
+            </div>
+
+            <div id="buttons">
+                <!-- Calls function from js -->
+                <button class="btn" id="submitWordButton" type="button" onclick="submitWord()">Submit</button>
+                <button class="btn" id="resetGameButton" type="button" onclick="newGame()">New Tiles</button>
+            </div>
+
+            <div class="rack-tiles" id="rack">
+                <ul id="letterRack"></ul>
+            </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
